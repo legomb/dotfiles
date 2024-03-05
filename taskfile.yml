@@ -1,7 +1,8 @@
 version: '3'
 
 env:
-  BREWFILE_PATH: '{{.PWD}}/brew/Brewfile'
+  CONFIG_PATH: '{{.PWD}}/config'
+  BREWFILE_PATH: '{{.CONFIG_PATH}}/brew/Brewfile'
 
 dotenv: ['.env', '{{.ENV}}/.env.', '{{.HOME}}/.env']
 
@@ -118,12 +119,12 @@ tasks:
   stow:stow:simulate:
     desc: Stows the dotfiles in the local home dir
     cmds:
-      - stow -nSv --dir=. --target=$HOME nano
+      - stow -nSv --dir={{.CONFIG_PATH}} --target=$HOME nano
 
   stow:unstow:
     desc: Unstows the dotfiles in the local home dir
     cmds:
-      - stow -D --dir=. --target=$HOME nano
+      - stow -D --dir={{.CONFIG_PATH}} --target=$HOME nano
 
   aichat:
     desc: |
@@ -135,4 +136,4 @@ tasks:
 
   e:
     cmds:
-      - echo $HOMEBREW_BUNDLE_FILE
+      - echo $BREWFILE_PATH
