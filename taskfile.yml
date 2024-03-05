@@ -116,6 +116,7 @@ tasks:
     cmds:
       - for:
           - nano
+          - yabai
           - borders
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
