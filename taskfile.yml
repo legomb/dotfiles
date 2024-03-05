@@ -118,6 +118,7 @@ tasks:
           - nano
           - yabai
           - borders
+          - skhd
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
