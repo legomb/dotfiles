@@ -1,4 +1,4 @@
 .git
 taskfile.yml
 README.md
-brew/**
+config/brew/**
