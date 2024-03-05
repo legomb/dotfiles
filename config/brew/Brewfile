@@ -42,18 +42,18 @@ brew "koekeishiya/formulae/yabai"
 cask "sf-symbols"
 cask "vagrant"
 cask "xquartz"
-mas "Aeon Timeline", id: 1563351378
+# mas "Aeon Timeline", id: 1563351378
 mas "Brother iPrint&Scan", id: 1193539993
-mas "iA Writer", id: 775737590
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "LanguageTool", id: 1534275760
-mas "Magnet", id: 441258766
-mas "Numbers", id: 409203825
+# mas "iA Writer", id: 775737590
+# mas "iMovie", id: 408981434
+# mas "Keynote", id: 409183694
+# mas "LanguageTool", id: 1534275760
+# mas "Magnet", id: 441258766
+# mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Telegram", id: 747648890
-mas "Ulysses", id: 1225570693
-mas "Ulysses", id: 623795237
+# mas "Ulysses", id: 1225570693
+# mas "Ulysses", id: 623795237
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
 vscode "adamvoss.vscode-languagetool"
