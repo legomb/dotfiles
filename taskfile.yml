@@ -117,17 +117,19 @@ tasks:
       - for:
           - nano
           - borders
-        cmd: stow --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
+        cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:stow:simulate:
     desc: Simulates the stowing of dotfiles in the local home dir (no harm done)
     cmds:
-      - stow -nSv --dir={{.CONFIG_PATH}} --target=$HOME nano
+      - task: stow:stow
+        vars: { CLI_ARGS: '-nSv' }
 
   stow:unstow:
     desc: Unstows the dotfiles in the local home dir
     cmds:
-      - stow -D --dir={{.CONFIG_PATH}} --target=$HOME nano
+      - task: stow:stow
+        vars: { CLI_ARGS: '-D' }
 
   aichat:
     desc: |
