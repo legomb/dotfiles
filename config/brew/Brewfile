@@ -1,6 +1,8 @@
 tap "cirruslabs/cli"
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 brew "aichat"
