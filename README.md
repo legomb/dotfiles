@@ -9,30 +9,24 @@ My macOS configuration files.
 ```sh
 xcode-select --install
 sudo xcodebuild -license accept
-
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-brew install git
 ```
 
-~~#TODO see https://medium.com/@protiumx/bash-gnu-stow-take-a-walk-while-your-new-macbook-is-being-set-up-351a6f2f9225 for good template~~
-
-2. Stow dotfiles:
-
-```sh
-task stow:stow
-```
-
-3. Install Homebrew:
+2. Install Homebrew:
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-4. Install Taskfile:
+3. Install git and Taskfile:
 
 ```sh
-brew install go-task
+brew install git go-task
+```
+
+4. Stow dotfiles:
+
+```sh
+task stow:stow
 ```
 
 5. Use tasks to install everything:
