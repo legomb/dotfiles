@@ -114,10 +114,13 @@ tasks:
   stow:stow:
     desc: Stows the dotfiles in the local home dir
     cmds:
-      - stow --dir=. --target=$HOME nano
+      - for:
+          - nano
+          - borders
+        cmd: stow --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:stow:simulate:
-    desc: Stows the dotfiles in the local home dir
+    desc: Simulates the stowing of dotfiles in the local home dir (no harm done)
     cmds:
       - stow -nSv --dir={{.CONFIG_PATH}} --target=$HOME nano
 
@@ -133,7 +136,3 @@ tasks:
       more info: https://github.com/sigoden/aichat?tab=readme-ov-file#command
     cmds:
       - aichat {{.CLI_ARGS}}
-
-  e:
-    cmds:
-      - echo $BREWFILE_PATH
