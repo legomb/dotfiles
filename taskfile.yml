@@ -119,7 +119,7 @@ tasks:
           - borders
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
-  stow:stow:simulate:
+  stow:simulate:
     desc: Simulates the stowing of dotfiles in the local home dir (no harm done)
     cmds:
       - task: stow:stow
