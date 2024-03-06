@@ -2,14 +2,6 @@
 
 # To change colors, use the 0xff prefix + the hex rgb value for the color, e.g. 0xffff118c for color  #ff118c
 
-# options=(
-# 	style=round
-# 	width=5.0
-# 	hidpi=off
-# 	active_color=0xffe2e2e3
-# 	inactive_color=0xff414550
-# )
-
 options=(
 	style=round
 	width=5.0
