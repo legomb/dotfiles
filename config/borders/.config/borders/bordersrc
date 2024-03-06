@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# To change colors, use the 0xff prefix + the hex rgb value for the color, e.g. 0xffff118c for color  #ff118c
+
+options=(
+	style=round
+	width=5.0
+	hidpi=off
+	active_color=0xffff118c
+	inactive_color=0xff414550
+)
+
+borders "${options[@]}" &

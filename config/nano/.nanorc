@@ -1,0 +1,52 @@
+## Sample initialization file for GNU nano.
+##
+## Please note that you must have configured nano with --enable-nanorc
+## for this file to be read!  Also note that this file should not be in
+## DOS or Mac format, and that characters specially interpreted by the
+## shell should not be escaped here.
+##
+
+## Nanorc files
+include "~/.nano/nanorc.nanorc"
+
+## C/C++
+include "~/.nano/c.nanorc"
+
+## HTML
+include "~/.nano/html.nanorc"
+
+## TeX
+include "~/.nano/tex.nanorc"
+
+## Quoted emails (under e.g. mutt)
+include "~/.nano/mutt.nanorc"
+
+## Patch files
+include "~/.nano/patch.nanorc"
+
+## Manpages
+include "~/.nano/man.nanorc"
+
+## Groff
+include "~/.nano/groff.nanorc"
+
+## Perl
+include "~/.nano/perl.nanorc"
+
+## Python
+include "~/.nano/python.nanorc"
+
+## Ruby
+include "~/.nano/ruby.nanorc"
+
+## Java
+include "~/.nano/java.nanorc"
+
+## Assembler
+include "~/.nano/asm.nanorc"
+
+## Bourne shell scripts
+include "~/.nano/sh.nanorc"
+
+## YAML files
+include "~/.nano/yaml.nanorc"
