@@ -121,6 +121,7 @@ tasks:
           - skhd
           - zsh
           - kitty
+          - nvim
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
