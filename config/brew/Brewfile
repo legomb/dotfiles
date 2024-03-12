@@ -21,6 +21,7 @@ brew "go-task"
 brew "python@3.11"
 brew "jinja2-cli"
 brew "jq"
+brew "lsd"
 brew "luajit", args: ["HEAD"]
 brew "mas"
 brew "micro"

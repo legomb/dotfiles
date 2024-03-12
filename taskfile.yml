@@ -122,6 +122,7 @@ tasks:
           - zsh
           - kitty
           - nvim
+          - lsd
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
