@@ -141,6 +141,7 @@
     "git.confirmSync": false,
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
+    "workbench.settings.editor": "json",
     "githubPullRequests.createOnPublishBranch": "never",
     "files.associations": {
         "*.md": "markdown"
