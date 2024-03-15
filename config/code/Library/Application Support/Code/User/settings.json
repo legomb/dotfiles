@@ -146,5 +146,5 @@
     "files.associations": {
         "*.md": "markdown"
     },
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "catppuccin-frappe",
 }
