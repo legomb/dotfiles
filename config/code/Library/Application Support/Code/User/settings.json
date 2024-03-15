@@ -38,7 +38,9 @@
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+	"terminal.integrated.fontSize": 13,
+	"terminal.integrated.fontWeight": "normal",
     "markdown-fiction-writer.editDialogue.marker": "\"Hello,\" (quotes)",
     "latex-workshop.view.pdf.viewer": "tab",
     "git.enableSmartCommit": true,
