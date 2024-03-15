@@ -17,7 +17,7 @@
     "atlascode.bitbucket.enabled": true,
     "atlascode.jira.enabled": false,
     "atlascode.helpExplorerEnabled": false,
-    "workbench.colorTheme": "Transparent Color Theme",
+    "workbench.colorTheme": "Catppuccin Frappé",
     "editor.minimap.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "grammarly.domain": "creative",
@@ -146,4 +146,5 @@
     "files.associations": {
         "*.md": "markdown"
     },
+    "workbench.iconTheme": "material-icon-theme",
 }
