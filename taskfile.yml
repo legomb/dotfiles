@@ -124,6 +124,7 @@ tasks:
           - nvim
           - lsd
           - code
+          - tmux
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
