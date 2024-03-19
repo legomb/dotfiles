@@ -115,6 +115,7 @@ tasks:
     desc: Stows the dotfiles in the local home dir
     cmds:
       - for:
+          - aichat
           - nano
           - yabai
           - borders
@@ -147,3 +148,8 @@ tasks:
       more info: https://github.com/sigoden/aichat?tab=readme-ov-file#command
     cmds:
       - aichat {{.CLI_ARGS}}
+
+  git:submodules:update:
+    desc: Initialize submodules
+    cmds:
+      - git submodule update --init --recursive
