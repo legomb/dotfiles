@@ -23,13 +23,22 @@ sudo xcodebuild -license accept
 brew install git go-task
 ```
 
-4. Stow dotfiles:
+4. Clone the repo.
+
+
+5. Initialize submodules:
+
+```sh
+task git:submodules:update
+```
+
+6. Stow dotfiles:
 
 ```sh
 task stow:stow
 ```
 
-5. Use tasks to install everything:
+7. Install everything:
 
 ```sh
 task brew:bundle:install
