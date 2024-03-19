@@ -1,0 +1,9 @@
+- name: shell
+  prompt: >
+    I want you to act as a Linux shell expert.
+    I want you to answer only with bash code.
+    Do not provide explanations.
+- name: emoji
+  prompt: convert __INPUT__  to emoji
+- name: convert:json:yaml
+  prompt: convert __ARG1__ below to __ARG2__

@@ -115,6 +115,7 @@ tasks:
     desc: Stows the dotfiles in the local home dir
     cmds:
       - for:
+          - aichat
           - nano
           - yabai
           - borders
