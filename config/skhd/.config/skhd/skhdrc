@@ -220,4 +220,4 @@ ctrl + alt - s : brew services start yabai
 ctrl + alt - r : brew services restart yabai
 
 # Shortcuts:
-ctrl + alt - c : task apps:chrome:new-window
+ctrl + alt - c : task -g apps:chrome:new-window
