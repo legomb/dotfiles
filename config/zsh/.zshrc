@@ -115,6 +115,10 @@ alias lsd='lsd --config-file ~/.config/lsd/config.yaml'
 # alias la='ls -a'
 # alias lla='ls -la'
 # alias lt='ls --tree'
+alias ai-shell='aichat -r shell'
+alias ai-emoji='aichat -r emoji'
+alias ai-dutchie='aichat -r translator:dutch'
+alias ai-coder='aichat -r coder'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

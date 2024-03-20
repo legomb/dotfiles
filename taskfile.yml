@@ -141,14 +141,6 @@ tasks:
       - task: stow:stow
         vars: { CLI_ARGS: '-D' }
 
-  aichat:
-    desc: |
-      runs aichat
-      config location: /Users/.../Library/Application Support/aichat/*.yaml
-      more info: https://github.com/sigoden/aichat?tab=readme-ov-file#command
-    cmds:
-      - aichat {{.CLI_ARGS}}
-
   git:submodules:update:
     desc: Initialize submodules
     cmds:

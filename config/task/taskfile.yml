@@ -8,12 +8,42 @@ tasks:
       - cmd: task -l
         silent: true
 
+  apps:chrome:new-window:
+    desc: Creates a new Chrome window
+    cmds:
+      - open -na "Google Chrome"
+
   macos:space:create:
     desc: Creates a new macOS space
     cmds:
       - yabai -m space --create
 
-  apps:chrome:new-window:
-    desc: Creates a new Chrome window
+  aichat:
+    desc: |
+      runs aichat (https://github.com/sigoden/aichat)
     cmds:
-      - open -na "Google Chrome"
+      - aichat {{.CLI_ARGS}}
+
+  aichat:translator-shell:
+    desc: |
+      runs aichat shell translator
+    cmds:
+      - aichat -r shell {{.CLI_ARGS}}
+
+  aichat:translator-emoji:
+    desc: |
+      runs aichat emoji translator
+    cmds:
+      - aichat -r emoji {{.CLI_ARGS}}
+
+  aichat:translator-dutch:
+    desc: |
+      runs aichat translator
+    cmds:
+      - aichat -r translator:dutch {{.CLI_ARGS}}
+
+  aichat:translator-coder:
+    desc: |
+      runs coder translator
+    cmds:
+      - aichat -r coder {{.CLI_ARGS}}
