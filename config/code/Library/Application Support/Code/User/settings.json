@@ -31,7 +31,7 @@
         "subtitle": "symbol-type-parameter"
     },
     "markdown-fiction-writer.edit.easyParagraphCreation": "Shift+Enter",
-    "editor.fontFamily": "MesloLGS NF, Menlo, Monaco",
+    "editor.fontFamily": "Menlo, Helvetica Neue, Monaco, 'Courier New', monospace",
     "markdown-fiction-writer.metadata.categories.summaryEnabled": true,
     "redhat.telemetry.enabled": false,
     "terminal.external.osxExec": "iTerm 2.app",
