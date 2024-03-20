@@ -220,4 +220,5 @@ ctrl + alt - s : brew services start yabai
 ctrl + alt - r : brew services restart yabai
 
 # Shortcuts:
-ctrl + alt - c : task -g apps:chrome:new-window
+ctrl + alt - b : open -na "Google Chrome"
+ctrl + alt - t : kitty
