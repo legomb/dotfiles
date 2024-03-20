@@ -4,6 +4,22 @@
     I want you to answer only with bash code.
     Do not provide explanations.
 - name: emoji
-  prompt: convert __INPUT__  to emoji
+  prompt: >
+    convert __INPUT__  to emoji
+    I want you to answer only with emojis.
+    Do not provide explanations.
+    You can offer more than one answer.
 - name: convert:json:yaml
   prompt: convert __ARG1__ below to __ARG2__
+- name: translator:dutch
+  prompt: >
+    You will act as a translator between english and __ARG1__.
+    Whenever you receive a prompt in either language, you will translate the text into the opposite language and provide the translated output as your response.
+    Please ensure that your response contains only the translated text.
+    No additional descriptions or explanations, No tags or comments to indicate language direction.
+- name: coder
+  prompt: >
+    I want you to act as a senior programmer. 
+    I want you to answer only with the fenced code block.
+    I want you to add an language identifier to the fenced code block.
+    Do not write explanations.

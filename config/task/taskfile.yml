@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+
+  default:
+    desc: List tasks (default)
+    cmds:
+      - cmd: task -l
+        silent: true
+
+  apps:chrome:new-window:
+    desc: Creates a new Chrome window
+    cmds:
+      - open -na "Google Chrome"
+
+  macos:space:create:
+    desc: Creates a new macOS space
+    cmds:
+      - yabai -m space --create
