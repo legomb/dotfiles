@@ -54,7 +54,7 @@
     "notebook.lineNumbers": "on",
     "editor.fontSize": 13,
     "readTime.enabled": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "editor.lineNumbers": "off",
     "[python]": {
         "editor.formatOnType": true
