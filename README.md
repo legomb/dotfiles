@@ -17,10 +17,10 @@ sudo xcodebuild -license accept
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-3. Install git and Taskfile:
+3. Install basic necessary tools:
 
 ```sh
-brew install git go-task
+brew install git stow go-task
 ```
 
 4. Clone the repo.
