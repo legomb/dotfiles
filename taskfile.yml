@@ -41,7 +41,7 @@ tasks:
   borders:start:
     desc:
     cmds:
-      - borders/bordersrc
+      - ~/.config/borders/bordersrc
 
   yabai:install:
     desc: Installs yabai
