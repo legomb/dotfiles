@@ -54,6 +54,7 @@ tasks:
           - code
           - task
           - tmux
+          - git
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
