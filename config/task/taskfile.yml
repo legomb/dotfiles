@@ -91,3 +91,13 @@ tasks:
     cmds:
       - task: skhd:stop
       - task: skhd:start
+
+  caffeinate:caffeinate:
+    desc: Keeps the mac and its screen on, even when closed.
+    cmds:
+      - caffeinate -d
+
+  caffeinate:manual:
+    desc: Displays caffeinate manual
+    cmds:
+      - man caffeinate
