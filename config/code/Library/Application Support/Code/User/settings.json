@@ -22,7 +22,7 @@
     "explorer.confirmDragAndDrop": false,
     "grammarly.domain": "creative",
     "languageTool.language": "es",
-    "terminal.integrated.shell.osx": "/bin/bash",
+    "terminal.integrated.shell.osx": "/bin/zsh",
     "markdown-fiction-writer.export.outputFormat.default": "docx",
     "markdown-fiction-writer.export.smartDeshes": false,
     "explorer.confirmDelete": false,
@@ -34,7 +34,7 @@
     "editor.fontFamily": "Menlo, Helvetica Neue, Monaco, 'Courier New', monospace",
     "markdown-fiction-writer.metadata.categories.summaryEnabled": true,
     "redhat.telemetry.enabled": false,
-    "terminal.external.osxExec": "iTerm 2.app",
+    "terminal.external.osxExec": "alacritty.app",
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
