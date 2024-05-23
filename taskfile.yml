@@ -55,6 +55,7 @@ tasks:
           - task
           - tmux
           - git
+          - alacritty
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
