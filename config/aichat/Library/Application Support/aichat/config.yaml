@@ -4,5 +4,7 @@ clients:
   api_base: http://127.0.0.1:11434
   api_key: null
   models:
-  - name: mistral:instruct
+  # - name: mistral:instruct
+  #   max_tokens: null
+  - name: llama3
     max_tokens: null
