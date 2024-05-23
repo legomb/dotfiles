@@ -143,4 +143,6 @@
         "*.md": "markdown"
     },
     "workbench.iconTheme": "catppuccin-frappe",
+    "update.mode": "manual",
+    "javascript.updateImportsOnFileMove.enabled": "always",
 }
