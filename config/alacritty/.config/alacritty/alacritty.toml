@@ -37,9 +37,9 @@ background = "0x2d4f67"
 foreground = "0xc8c093"
 
 [cursor]
-style = "Block"
-unfocused_hollow = true
-vi_mode_style = "Beam"
+style = "Beam"
+unfocused_hollow = false
+vi_mode_style = "None"
 
 [font]
 size = 14
@@ -84,6 +84,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 decorations = "buttonless"
 dynamic_padding = true
 opacity = 0.75
+blur = false
 
 [window.padding]
 x = 10
