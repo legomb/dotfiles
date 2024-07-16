@@ -74,7 +74,7 @@ key = "N"
 mods = "Command"
 
 [mouse]
-hide_when_typing = true
+hide_when_typing = false
 
 [selection]
 save_to_clipboard = true
@@ -84,7 +84,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 decorations = "buttonless"
 dynamic_padding = true
 opacity = 0.75
-blur = false
+blur = true
 
 [window.padding]
 x = 10
