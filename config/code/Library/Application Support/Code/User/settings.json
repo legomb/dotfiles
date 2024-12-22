@@ -6,7 +6,7 @@
     "window.titleBarStyle": "native",
     "apc.electron": {
         "titleBarStyle": "customButtonsOnHover",
-        "opacity": 0.95,
+        "opacity": 0.70,
         "transparent": true,
         // "backgroundColor": "#00000000",
         "backgroundColor": "#2a0a64",
@@ -145,4 +145,7 @@
     "workbench.iconTheme": "catppuccin-frappe",
     "update.mode": "manual",
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "remote.SSH.remotePlatform": {
+        "*.gitpod.io": "linux"
+    },
 }

@@ -80,9 +80,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=( 
     git
     zsh-autosuggestions
+    zsh-history-substring-search
 )
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # User configuration
 
@@ -128,3 +130,6 @@ eval "$(zoxide init zsh)"
 
 # Use fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Disable instant prompt
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
