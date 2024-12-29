@@ -1,0 +1,5 @@
+theme = catppucchin-mocha
+
+background-opacity = 70
+background-blur-radius = 20
+
