@@ -75,3 +75,8 @@ tasks:
     desc: Initialize submodules
     cmds:
       - git submodule update --init --recursive
+
+  nix:install:
+    desc: Installs Nix
+    cmds:
+      - curl -L https://nixos.org/nix/install | sh

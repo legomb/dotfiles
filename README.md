@@ -10,28 +10,42 @@ My macOS configuration files.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-1. Install requirements:
+1. Install Nix
+
+```sh
+curl -L https://nixos.org/nix/install | sh
+```
+
+Complete instructions can be found on the [Nix website](https://nix.dev/install-nix).
+
+2. Install nix stuff:
+
+```
+
+```
+
+3. Install requirements:
 
 ```sh
 brew install git stow go-task
 ```
 
-3. Clone the repo.
+4. Clone the repo.
 
 
-4. Initialize submodules:
+5. Initialize submodules:
 
 ```sh
 task git:submodules:update
 ```
 
-5. Stow dotfiles:
+6. Stow dotfiles:
 
 ```sh
 task stow:stow
 ```
 
-6. Install everything:
+7. Install everything:
 
 ```sh
 task brew:bundle:install
