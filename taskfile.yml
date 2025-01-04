@@ -57,6 +57,7 @@ tasks:
           - git
           - alacritty
           - ghostty
+          - nix
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
@@ -80,3 +81,15 @@ tasks:
     desc: Installs Nix
     cmds:
       - curl -L https://nixos.org/nix/install | sh
+
+  nix:nix-darwin:flake:init:
+    desc: Initializes nix-darwin flake, as per https://youtu.be/Z8BL8mdzWHI?si=azkz7EwYHTEUBCz3
+    dir: 'config/nix/.config/nix-darwin'
+    cmds:
+      - nix flake init -t nix-darwin --extra-experimental-features "nix-command flakes"
+      - sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+  
+  nix:nix-darwin:flake:switch:
+    desc: Switches to the MacOS flake
+    cmds:
+      - nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake config/nix/nix-darwin#macbook
