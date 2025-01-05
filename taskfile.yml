@@ -95,3 +95,10 @@ tasks:
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
     cmds:
       - nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#macbook
+
+  nix:nix-darwin:flake:rebuild:
+    desc: Rebuilds the MacOS flake
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds:
+      # - darwin-rebuild build --flake .#macbook
+      - nix run nix-darwin --extra-experimental-features "nix-command flakes" -- build --flake .#macbook
