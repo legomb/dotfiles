@@ -36,6 +36,14 @@
       # $ darwin-rebuild changelog
       system.stateVersion = 5;
 
+      security.pam.enableSudoTouchIdAuth = true;
+
+      system.defaults = {
+        dock.autohide = true;
+        finder.FXPreferredViewStyle = "clmv";
+        NSGlobalDomain.AppleInterfaceStyle = "Dark";
+      };
+
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
     };
