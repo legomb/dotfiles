@@ -91,5 +91,6 @@ tasks:
   
   nix:nix-darwin:flake:switch:
     desc: Switches to the MacOS flake
+    dir: 'config/nix/.config/nix-darwin'
     cmds:
-      - nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake config/nix/nix-darwin#macbook
+      - nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#macbook
