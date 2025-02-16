@@ -221,4 +221,4 @@ ctrl + alt - r : brew services restart yabai
 
 # Shortcuts:
 ctrl + alt - b : open -na "Google Chrome"
-ctrl + alt - t : alacritty
+ctrl + alt - t : ghostty
