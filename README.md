@@ -4,27 +4,26 @@ My macOS configuration files.
 
 ## Setting up a new MacOS machine 🚀
 
-1. Install Nix
+1. Install [Nix](https://nix.dev/install-nix):
 
-```sh
-curl -L https://nixos.org/nix/install | sh
-```
+  ```sh
+  curl -L https://nixos.org/nix/install | sh
+  ```
 
-Complete instructions can be found on the [Nix website](https://nix.dev/install-nix).
+1. Clone the repo
 
-2. Clone the repo.
+2. Switch to the nix flake:
 
-3. Initialize git submodules:
+  ```sh
+  cd config/nix/.config/nix-darwin
+  nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#macbook
+  ```
+
+  This will install basic dependencies (go-task, etc.) as well as configure macOS settings.
+4. Initialize git submodules:
 
 ```sh
 task git:submodules:update
-```
-
-4. Switch to the nix flake:
-
-```sh
-cd config/nix/.config/nix-darwin
-nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#macbook
 ```
 
 5. Stow dotfiles:
@@ -33,7 +32,7 @@ nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch 
 task stow:stow
 ```
 
-6. Install everything:
+6. Install everything using brew:
 
 ```sh
 task brew:bundle:install
