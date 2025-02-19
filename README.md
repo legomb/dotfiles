@@ -2,24 +2,29 @@
 
 My macOS configuration files.
 
+> [!NOTE]  
+> Nix support is in beta. If I'm happy with Nix after a while, I'll migrate everything else to Nix, and installation instructions will become simpler.
+
 ## Setting up a new MacOS machine 🚀
 
-1. Install Homebrew:
+1. Install [Nix](https://nix.dev/install-nix):
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+  ```sh
+  curl -L https://nixos.org/nix/install | sh
+  ```
 
-1. Install requirements:
+2. Clone the repo
 
-```sh
-brew install git stow go-task
-```
+3. Switch to the nix flake:
 
-3. Clone the repo.
+  ```sh
+  cd config/nix/.config/nix-darwin
+  nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#macbook
+  ```
 
+  This will configure macOS settings and install basic dependencies (go-task, etc.)
 
-4. Initialize submodules:
+4. Initialize git submodules:
 
 ```sh
 task git:submodules:update
@@ -31,7 +36,7 @@ task git:submodules:update
 task stow:stow
 ```
 
-6. Install everything:
+6. Install everything using brew:
 
 ```sh
 task brew:bundle:install
