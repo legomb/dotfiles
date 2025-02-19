@@ -10,9 +10,9 @@ My macOS configuration files.
   curl -L https://nixos.org/nix/install | sh
   ```
 
-1. Clone the repo
+2. Clone the repo
 
-2. Switch to the nix flake:
+3. Switch to the nix flake:
 
   ```sh
   cd config/nix/.config/nix-darwin
@@ -20,6 +20,7 @@ My macOS configuration files.
   ```
 
   This will install basic dependencies (go-task, etc.) as well as configure macOS settings.
+
 4. Initialize git submodules:
 
 ```sh
