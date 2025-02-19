@@ -3,7 +3,7 @@
 My macOS configuration files.
 
 > [!NOTE]  
-> Nix support is in beta. If I'm happy with Nix after a while, I'll migrate everything else to Nix as well, and installation instructions should become simpler, as everything will be done via Nix.
+> Nix support is in beta. If I'm happy with Nix after a while, I'll migrate everything else to Nix, and installation instructions will become simpler.
 
 ## Setting up a new MacOS machine 🚀
 
