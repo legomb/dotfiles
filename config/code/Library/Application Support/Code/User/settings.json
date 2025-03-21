@@ -142,7 +142,7 @@
     "files.associations": {
         "*.md": "markdown"
     },
-    "workbench.iconTheme": "catppuccin-frappe",
+    "workbench.iconTheme": "catppuccin-macchiato",
     "update.mode": "manual",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "remote.SSH.remotePlatform": {
