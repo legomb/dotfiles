@@ -11,7 +11,7 @@
   let
     configuration = { pkgs, ... }: {
 
-# fix: default Nix build user group ID changed
+    # fix: default Nix build user group ID changed
     # error: Build user group has mismatching GID, aborting activation
     # The default Nix build user group ID was changed from 30000 to 350.
     # You are currently managing Nix build users with nix-darwin, but your
@@ -27,19 +27,18 @@
     # of Nix. This is because the group ID is used in many places in the Nix
       ids.gids.nixbld = 30000;
 
-            nixpkgs.config.allowUnfree = true;
+      nixpkgs.config.allowUnfree = true;
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
 
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages =
-        [
-          pkgs.git
-          pkgs.go-task
-          pkgs.neovim
-          pkgs.stow
-        ];
+      environment.systemPackages = with pkgs; [
+        git
+        go-task
+        neovim
+        stow
+      ];
 
       nix.settings = {
         keep-outputs = true;
