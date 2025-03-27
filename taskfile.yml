@@ -101,3 +101,9 @@ tasks:
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
     cmds: 
       - darwin-rebuild switch --flake .#macbook
+
+  nix:nix-darwin:flake:update:
+    desc: Updates the MacOS flake lock file
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds: 
+      - nix flake update
