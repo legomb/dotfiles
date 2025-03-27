@@ -17,7 +17,7 @@
     "atlascode.bitbucket.enabled": true,
     "atlascode.jira.enabled": false,
     "atlascode.helpExplorerEnabled": false,
-    "workbench.colorTheme": "Catppuccin Frappé",
+    "workbench.colorTheme": "Catppuccin Mocha",
     "editor.minimap.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "grammarly.domain": "creative",
@@ -61,7 +61,7 @@
     },
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": false,
         "scminput": false,
@@ -142,10 +142,11 @@
     "files.associations": {
         "*.md": "markdown"
     },
-    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.iconTheme": "catppuccin-mocha",
     "update.mode": "manual",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "remote.SSH.remotePlatform": {
         "*.gitpod.io": "linux"
     },
+}},
 }
