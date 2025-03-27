@@ -12,6 +12,8 @@
     configuration = { pkgs, ... }: {
 
       nixpkgs.config.allowUnfree = true;
+      # The platform the configuration will be used on.
+      nixpkgs.hostPlatform = "aarch64-darwin";
 
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
@@ -23,8 +25,13 @@
           pkgs.stow
         ];
 
-      # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
+      nix.settings = {
+        keep-outputs = true;
+        keep-derivations = true;
+
+        # Necessary for using flakes on this system.
+        experimental-features = "nix-command flakes";
+      };
 
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;
@@ -44,17 +51,12 @@
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
       };
 
-      # Automatic cleanup / garbage collection
+      # Garbage collection
       nix.gc = {
         automatic = true;
         options = "--delete-generations +5";
       };
-      nix.settings.keep-outputs = true;
-      nix.settings.keep-derivations = true;
       nix.optimise.automatic = true;
-
-      # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "aarch64-darwin";
     };
   in
   {
