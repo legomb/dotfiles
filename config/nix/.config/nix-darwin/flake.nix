@@ -44,6 +44,15 @@
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
       };
 
+      # Automatic cleanup / garbage collection
+      nix.gc = {
+        automatic = true;
+        options = "--delete-generations +5";
+      };
+      nix.settings.keep-outputs = true;
+      nix.settings.keep-derivations = true;
+      nix.optimise.automatic = true;
+
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
     };
