@@ -28,6 +28,23 @@
         stow
       ];
 
+      # Enable and configure Homebrew
+      homebrew = {
+        enable = true;
+        onActivation = {
+          autoUpdate = false;
+          cleanup = "none";
+        };
+        global = {
+          brewfile = false;
+        };
+        # taps = [];
+        # brews = [];
+        # casks = [];
+        # masApps = [];
+        # whalebrews = [];
+      };
+
       nix.settings = {
         keep-outputs = true;
         keep-derivations = true;
