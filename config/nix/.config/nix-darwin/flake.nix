@@ -12,7 +12,7 @@
     configuration = { pkgs, ... }: {
 
       # The default Nix build user group ID was changed from 30000 to 350. You can set the configured group ID to match the actual value with `ids.gids.nixbld = 30000;`
-      # We do not recommend trying to change the group ID with macOS user management tools without a complete uninstallation and reinstallation of Nix. This is because the group ID is used in many places in the Nix
+      # We do not recommend trying to change the group ID with macOS user management tools without a complete uninstallation and reinstallation of Nix.
       ids.gids.nixbld = 30000;
 
       nixpkgs.config.allowUnfree = true;
