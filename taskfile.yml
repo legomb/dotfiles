@@ -83,26 +83,26 @@ tasks:
     cmds:
       - curl -L https://nixos.org/nix/install | sh
 
-  nix:nix-darwin:flake:init:
+  nix:flake:init:nix-darwin:
     desc: Initializes nix-darwin flake, as per https://youtu.be/Z8BL8mdzWHI?si=azkz7EwYHTEUBCz3
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
     cmds:
       - nix flake init -t nix-darwin --extra-experimental-features "nix-command flakes"
       - sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
   
-  nix:nix-darwin:flake:switch:
+  nix:flake:switch:nix-darwin:
     desc: Switches to the MacOS flake
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
     cmds:
       - nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#macbook
 
-  nix:nix-darwin:flake:rebuild:
+  nix:flake:rebuild:nix-darwin:
     desc: Rebuilds the MacOS flake
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
     cmds: 
       - darwin-rebuild switch --flake .#macbook
 
-  nix:nix-darwin:flake:update:
+  nix:flake:update:nix-darwin:
     desc: Updates the MacOS flake lock file
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
     cmds: 
