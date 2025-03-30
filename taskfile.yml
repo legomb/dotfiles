@@ -99,7 +99,7 @@ tasks:
   nix:flake:rebuild:nix-darwin:
     desc: Rebuilds the MacOS flake
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
-    cmds: 
+    cmds:
       - darwin-rebuild switch --flake .#macbook
 
   nix:flake:update:nix-darwin:
@@ -107,3 +107,9 @@ tasks:
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
     cmds: 
       - nix flake update
+
+  nix:flake:format:
+    desc: Formats MacOS flake file
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds: 
+      - nixfmt flake.nix
