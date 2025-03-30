@@ -27,23 +27,23 @@ My macOS configuration files.
 4. Install Homebrew:
 
   ```sh
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  task brew:install
   ```
-  
+
 5. Initialize git submodules:
 
-```sh
-task git:submodules:update
-```
+  ```sh
+  task git:submodules:update
+  ```
 
 6. Stow dotfiles:
 
-```sh
-task stow:stow
-```
+  ```sh
+  task stow:stow
+  ```
 
 7. Install everything using brew:
 
-```sh
-task brew:bundle:install
-```
+  ```sh
+  task brew:bundle:install
+  ```
