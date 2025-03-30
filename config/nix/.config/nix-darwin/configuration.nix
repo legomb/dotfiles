@@ -12,29 +12,13 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    coreutils
     git
     go-task
     neovim
     stow
     nixfmt-rfc-style
   ];
-
-  # Enable and configure Homebrew
-  homebrew = {
-    enable = true;
-    onActivation = {
-      autoUpdate = false;
-      cleanup = "none";
-    };
-    global = {
-      brewfile = false;
-    };
-    # taps = [];
-    # brews = [];
-    # casks = [];
-    # masApps = [];
-    # whalebrews = [];
-  };
 
   nix.settings = {
     keep-outputs = true;
@@ -43,9 +27,6 @@
     # Necessary for using flakes on this system.
     experimental-features = "nix-command flakes";
   };
-
-  # Enable alternative shell support in nix-darwin.
-  # programs.fish.enable = true;
 
   # Set Git commit hash for darwin-version.
   # system.configurationRevision = self.rev or self.dirtyRev or null;
