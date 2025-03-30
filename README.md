@@ -15,6 +15,10 @@ My macOS configuration files.
 
 2. Clone the repo
 
+  ```sh
+  git clone --recurse-submodules https://github.com/legomb/dotfiles.git
+  ```
+
 3. Switch to the nix flake:
 
   ```sh
@@ -30,19 +34,13 @@ My macOS configuration files.
   task brew:install
   ```
 
-5. Initialize git submodules:
-
-  ```sh
-  task git:submodules:update
-  ```
-
-6. Stow dotfiles:
+5. Stow dotfiles:
 
   ```sh
   task stow:stow
   ```
 
-7. Install everything using brew:
+6. Install everything using brew:
 
   ```sh
   task brew:bundle:install
