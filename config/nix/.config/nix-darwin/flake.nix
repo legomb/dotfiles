@@ -68,6 +68,7 @@
       system.defaults = {
         dock.autohide = true;
         finder.FXPreferredViewStyle = "clmv";
+        finder.AppleShowAllExtensions = true;
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
       };
 
