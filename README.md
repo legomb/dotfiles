@@ -24,19 +24,25 @@ My macOS configuration files.
 
   This will configure macOS settings and install basic dependencies (go-task, etc.)
 
-4. Initialize git submodules:
+4. Install Homebrew:
+
+  ```sh
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+  
+5. Initialize git submodules:
 
 ```sh
 task git:submodules:update
 ```
 
-5. Stow dotfiles:
+6. Stow dotfiles:
 
 ```sh
 task stow:stow
 ```
 
-6. Install everything using brew:
+7. Install everything using brew:
 
 ```sh
 task brew:bundle:install
