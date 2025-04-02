@@ -85,6 +85,7 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-history-substring-search
+    direnv
 )
 
 # User configuration
