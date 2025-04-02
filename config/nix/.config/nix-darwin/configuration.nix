@@ -1,6 +1,11 @@
 { self, pkgs, ... }:
 {
 
+  # imports =
+  #   [
+  #     ./modules/vscode.nix
+  #   ];
+
   # The default Nix build user group ID was changed from 30000 to 350. You can set the configured group ID to match the actual value with `ids.gids.nixbld = 30000;`
   # We do not recommend trying to change the group ID with macOS user management tools without a complete uninstallation and reinstallation of Nix.
   ids.gids.nixbld = 30000;
@@ -18,7 +23,7 @@
     neovim
     stow
     nixfmt-rfc-style
-    vscode-with-extensions
+    # vscode-with-extensions
   ];
 
   # Enable and configure Homebrew
@@ -51,7 +56,9 @@
       "libpng"
       "freetype"
       "cmatrix"
+      "cookiecutter"
       # "coreutils"
+      "direnv"
       "docker"
       "icu4c@76"
       "node"
@@ -72,6 +79,7 @@
       { name = "tree-sitter"; args = [ "HEAD" ]; }
       { name = "neovim"; link = false; }
       "nnn"
+      "ollama"
       "pandoc"
       # "python@3.11"
       # "rust"
@@ -80,6 +88,7 @@
       "tldr"
       "tmux"
       "tree"
+      # "uv"
       "vale"
       "w3m"
       "wget"
@@ -100,7 +109,7 @@
     # Casks (including commented out ones)
     casks = [
       "adobe-acrobat-reader"
-      "alacritty"
+      # "alacritty"
       "alt-tab"
       # "font-0xproto-nerd-font"
       # "font-3270-nerd-font"
@@ -209,6 +218,7 @@
   #     "bierner.markdown-yaml-preamble"
   #     "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
   #     "brandonkirbyson.vscode-animations"
+  #     "brettm12345.nixfmt-vscode"
   #     "catppuccin.catppuccin-vsc"
   #     "catppuccin.catppuccin-vsc-icons"
   #     "chrischinchilla.vscode-pandoc"
