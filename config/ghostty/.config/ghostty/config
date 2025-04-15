@@ -11,3 +11,4 @@ macos-titlebar-style = hidden
 copy-on-select = true
 
 confirm-close-surface = false
+quit-after-last-window-closed=true
