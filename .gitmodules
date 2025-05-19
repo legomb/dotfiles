@@ -6,4 +6,4 @@
 	url = https://github.com/tmux-plugins/tpm.git
 [submodule "config/zsh/.oh-my-zsh"]
 	path = config/zsh/.oh-my-zsh
-	url = https://github.com/romkatv/powerlevel10k.git
+	url = https://github.com/ohmyzsh/ohmyzsh.git
