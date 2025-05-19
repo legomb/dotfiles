@@ -18,7 +18,6 @@ tasks:
     cmds:
       - yabai -m space --create
 
-
   borders:start:
     desc:
     cmds:
@@ -101,3 +100,9 @@ tasks:
     desc: Displays caffeinate manual
     cmds:
       - man caffeinate
+
+  template:use:python:
+    desc: Creates a new python project based on our cookiecutter template
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - cookiecutter gh:legomb/cookiecutter-template-python

@@ -135,3 +135,10 @@ eval "$(zoxide init zsh)"
 
 # Disable instant prompt
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# carapace
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+# Order of groups can be configured with the zstyle group-order.
+# zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
+source <(carapace _carapace)

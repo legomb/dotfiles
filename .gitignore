@@ -1,1 +1,4 @@
 config/git/.gitconfig.local
+config/code/**
+!config/code/Library/Application Support/Code/User/settings.json
+!config/code/Library/Application Support/Code/User/keybindings.json
