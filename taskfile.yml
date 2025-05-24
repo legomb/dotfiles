@@ -39,9 +39,16 @@ tasks:
     cmds:
       - brew bundle cleanup --force --file='{{.BREWFILE_PATH}}'
 
+  zsh:create-powerlevel10k-symlink:
+    desc: Creates a symlink for powerlevel10k in the zsh directory.
+    cmds:
+      - mkdir -p config/zsh/.oh-my-zsh/custom/themes || true
+      - ln -sf ../../../../powerlevel10k config/zsh/.oh-my-zsh/custom/themes/powerlevel10k
+
   stow:stow:
     desc: Stows the dotfiles in the local home dir
     cmds:
+      - task: git:submodules:update
       - for:
           - aichat
           - nano
@@ -119,3 +126,4 @@ tasks:
     dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
     cmds: 
       - nixfmt flake.nix
+      - task: zsh:create-powerlevel10k-symlink

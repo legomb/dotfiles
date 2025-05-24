@@ -1,3 +1,9 @@
-[submodule "config/tmux/.tmux/plugins/tpm"]
-	path = config/tmux/.tmux/plugins/tpm
+[submodule "config/tmux/.config/tmux/plugins/tpm"]
+	path = config/tmux/.config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "config/zsh/.oh-my-zsh"]
+	path = config/zsh/.oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "config/powerlevel10k"]
+	path = config/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
