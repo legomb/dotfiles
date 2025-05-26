@@ -3,6 +3,7 @@ version: '3'
 env:
   CONFIG_PATH: '{{.PWD}}/config'
   BREWFILE_PATH: '{{.CONFIG_PATH}}/brew/Brewfile'
+  NIX_DARWIN_FLAKE_PATH: '{{.CONFIG_PATH}}/nix/.config/nix-darwin'
 
 dotenv: ['.env', '{{.ENV}}/.env.', '{{.HOME}}/.env']
 
@@ -64,6 +65,7 @@ tasks:
           - git
           - alacritty
           - ghostty
+          - nix
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
@@ -83,3 +85,45 @@ tasks:
     cmds:
       - git submodule update --init --recursive
       - task: zsh:create-powerlevel10k-symlink
+
+  nix:install:
+    desc: Installs Nix
+    cmds:
+      - curl -L https://nixos.org/nix/install | sh
+
+  nix:flake:init:nix-darwin:
+    desc: Initializes nix-darwin flake, as per https://youtu.be/Z8BL8mdzWHI?si=azkz7EwYHTEUBCz3
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds:
+      - nix flake init -t nix-darwin --extra-experimental-features "nix-command flakes"
+      - sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+  
+  nix:flake:switch:nix-darwin:
+    desc: Switches to the MacOS flake
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds:
+      - nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#macbook
+
+  nix:flake:rebuild:nix-darwin:
+    desc: Rebuilds the MacOS flake
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds:
+      - darwin-rebuild switch --flake .#macbook
+
+  nix:flake:rebuild:nix-darwin:dry-run:
+    desc: Rebuilds the MacOS flake
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds:
+      - darwin-rebuild switch --flake .#macbook --dry-run
+
+  nix:flake:update:nix-darwin:
+    desc: Updates the MacOS flake lock file
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds: 
+      - nix flake update
+
+  nix:flake:format:
+    desc: Formats MacOS flake file
+    dir: '{{.NIX_DARWIN_FLAKE_PATH}}'
+    cmds: 
+      - nixfmt flake.nix
