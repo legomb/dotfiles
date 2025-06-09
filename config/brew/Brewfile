@@ -34,7 +34,7 @@ brew "mas"
 brew "micro"
 brew "nano"
 brew "neofetch"
-brew "tree-sitter", args: ["HEAD"]
+# brew "tree-sitter", args: ["HEAD"]
 brew "neovim", link: false
 brew "nnn"
 brew "ollama"
@@ -140,7 +140,7 @@ mas "Brother iPrint&Scan", id: 1193539993
 # mas "Keynote", id: 409183694
 # mas "LanguageTool", id: 1534275760
 # mas "Magnet", id: 441258766
-# mas "Numbers", id: 409203825
+mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Telegram", id: 747648890
 # mas "Ulysses", id: 1225570693
@@ -221,7 +221,7 @@ vscode "redhat.vscode-yaml"
 vscode "samuelcolvin.jinjahtml"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "shyykoserhiy.vscode-spotify"
-vscode "stateful.runme"
+# vscode "stateful.runme"
 vscode "svelte.svelte-vscode"
 vscode "taniguchi.pandoc"
 vscode "task.vscode-task"
