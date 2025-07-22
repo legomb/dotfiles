@@ -1,5 +1,8 @@
 {
     "yaml.schemas": {
+        "~/.vscode/extensions/continue.continue-1.0.19-darwin-arm64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
     },
     // BEGIN -- settings to hide top menu bar
     // (requires Apc Customize UI++ extension)
@@ -148,5 +151,7 @@
     "remote.SSH.remotePlatform": {
         "*.gitpod.io": "linux"
     },
-}},
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }

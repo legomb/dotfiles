@@ -1,0 +1,26 @@
+name: Local Assistant
+version: 1.0.0
+schema: v1
+models:
+  - name: Qwen3-30b
+    provider: ollama
+    model: qwen3:30b-a3b
+    roles:
+      - chat
+      - edit
+      - autocomplete
+      - apply
+      - summarize
+  - name: embeddingsProvider
+    provider: ollama
+    model: nomic-embed-text
+    roles:
+      - embed
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase
