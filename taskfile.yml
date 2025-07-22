@@ -44,6 +44,16 @@ tasks:
       - mkdir -p config/zsh/.oh-my-zsh/custom/themes || true
       - ln -sf ../../../../powerlevel10k config/zsh/.oh-my-zsh/custom/themes/powerlevel10k
 
+  ollama:load-models:
+    desc: Loads all Ollama Modelfiles
+    cmds:
+      - |
+        for f in ~/.ollama/models/*.Modelfile; do
+          name=$(basename "$f" .Modelfile)
+          echo $name
+          ollama create "$name" -f "$f"
+        done
+
   stow:stow:
     desc: Stows the dotfiles in the local home dir
     cmds:
@@ -64,6 +74,8 @@ tasks:
           - git
           - alacritty
           - ghostty
+          - continue
+          - ollama
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
