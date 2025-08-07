@@ -96,3 +96,19 @@ tasks:
     cmds:
       - git submodule update --init --recursive
       - task: zsh:create-powerlevel10k-symlink
+
+  menu:
+    desc: "Interactive task picker"
+    cmds:
+      - cmd: |
+              # Get list of available tasks (skip the first "task: Available tasks..." line)
+              TASKS=$(task --list | tail -n +2 | sed 's/^[[:space:]]*//')
+
+              # Use gum to choose a task
+              SELECTED_TASK=$(echo "$TASKS" | gum choose)
+
+              # If user selected a task, run it
+              if [[ -n "$SELECTED_TASK" ]]; then
+                task "$SELECTED_TASK"
+              fi
+        silent: true
