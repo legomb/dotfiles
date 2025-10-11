@@ -106,3 +106,10 @@ tasks:
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - cookiecutter gh:legomb/cookiecutter-template-python
+
+  ssh:generate-keys:
+    desc: Generates ssh keys
+    cmds:
+      - ssh-keygen -t ed25519 -b 4096 -C "$(git config user.email)" -f ~/.ssh/bitbucket_id_ed25519
+      - ssh-add --apple-use-keychain ~/.ssh/bitbucket_id_ed25519
+      - cat ~/.ssh/bitbucket_id_ed25519.pub
