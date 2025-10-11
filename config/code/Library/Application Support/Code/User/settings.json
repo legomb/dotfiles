@@ -9,7 +9,7 @@
     "window.titleBarStyle": "native",
     "apc.electron": {
         "titleBarStyle": "customButtonsOnHover",
-        "opacity": 0.70,
+    "opacity": 0.7,
         "transparent": true,
         // "backgroundColor": "#00000000",
         "backgroundColor": "#2a0a64",
@@ -48,7 +48,8 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "git.enableSmartCommit": true,
     "workbench.editorAssociations": {
-        "*.pdf": "default"
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.pdf": "pdf.preview"
     },
     "workbench.startupEditor": "none",
     "editor.wordWrap": "on",
@@ -113,9 +114,7 @@
     "prettier.proseWrap": "never",
     "explorer.confirmPasteNative": false,
     "sqltools.useNodeRuntime": true,
-    "github.copilot.advanced": {
-        
-    },
+  "github.copilot.advanced": {},
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -124,9 +123,7 @@
         {
             "label": "My Issues",
             "query": "is:open assignee:${user} repo:${owner}/${repository}",
-            "groupBy": [
-                "milestone"
-            ]
+      "groupBy": ["milestone"]
         },
         {
             "label": "Created Issues",
@@ -154,4 +151,26 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+  "gitlens.advanced.messages": {
+    "suppressCommitNotFoundWarning": true
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.renderWhitespace": "none",
+  "git.openRepositoryInParentFolders": "never",
+  "git.replaceTagsWhenPull": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
 }
