@@ -65,6 +65,7 @@ tasks:
           - borders
           - skhd
           - zsh
+          - yazi
           - kitty
           - nvim
           - lsd
