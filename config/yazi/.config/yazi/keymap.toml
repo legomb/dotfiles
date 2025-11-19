@@ -1,0 +1,8 @@
+[keymap]
+"|" = "split:new"
+"-" = "hsplit:new"
+"x" = "tab:close"
+"tab" = "tab:next"
+"/" = "search:forward"
+"j" = "peek:down"
+"k" = "peek:up"

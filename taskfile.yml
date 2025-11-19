@@ -60,25 +60,26 @@ tasks:
       - task: git:submodules:update
       - for:
           - aichat
-          - nano
-          - yabai
-          - borders
-          - skhd
-          - zsh
-          - kitty
-          - nvim
-          - lsd
-          - code
-          - task
-          - tmux
-          - git
-          - ssh
           - alacritty
-          - ghostty
+          - borders
+          - code
           - continue
-          - ollama
           - crush
           - direnv
+          - ghostty
+          - git
+          - kitty
+          - lsd
+          - nano
+          - nvim
+          - ollama
+          - skhd
+          - ssh
+          - task
+          - tmux
+          - yabai
+          - yazi
+          - zsh
         cmd: stow {{.CLI_ARGS}} --dir={{.CONFIG_PATH}} --target=$HOME {{ .ITEM }}
 
   stow:simulate:
