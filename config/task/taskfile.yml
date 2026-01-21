@@ -19,7 +19,7 @@ tasks:
       - yabai -m space --create
 
   borders:start:
-    desc:
+    desc: Starts the borders service
     cmds:
       - ~/.config/borders/bordersrc
 
